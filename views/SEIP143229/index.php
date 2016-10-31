@@ -1,20 +1,20 @@
 <?php
-use App\person;
+
+include_once("../../vendor/autoload.php");
+use App\Person;
 use App\Student;
 
 //require_once("../../src/BITM/SEIP143229/Person.php");
 //require_once("../../src/BITM/SEIP143229/Student.php");
-function __autoload($className){
-
-
-
+/*function __autoload($className){
     echo $className."<br>";
-    list($ns,$cn) = explode("\\", $className);
-        require_once("../../src/BITM/SEIP143229/".$cn.".php");
-}
+    //list($ns,$cn) = explode("\\", $className);
+    $cn= explode('\\', $className);
+    require_once("../../src/BITM/SEIP143229/".$cn[1].".php");
+}*/
 
 $obj = new Person();
-echo $obj->showPersonalInfo();
+$obj->showPersonalInfo();
 
 $objStudent = new Student();
-echo $objStudent->ShowStudentInfo();
+$objStudent->ShowStudentInfo();
